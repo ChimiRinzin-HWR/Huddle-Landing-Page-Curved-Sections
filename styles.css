@@ -1,0 +1,520 @@
+@import url(./reset.css);
+
+:root{
+    --Pink: hsl(322, 100%, 66%);
+    --LightPink: hsl(321, 100%, 78%);
+    --LightRed: hsl(0, 100%, 63%);
+
+    --VeryDarkCyan: hsl(192, 100%, 9%);
+    --VeryPaleBlue: hsl(207, 100%, 98%);
+}
+
+html, body{
+    font-family: 'Open Sans';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+h1, h2, h3{
+    font-family: 'Poppins';
+}
+main{
+    width: 100%;
+    > section:not(.second-section){
+        padding: 4vw 5vw;
+    }
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    button{
+        height: 3vw;
+        width: 12vw;
+        border: 2px solid var(--Pink);
+        background-color: transparent;
+        color: var(--Pink);
+    }
+    button:hover{
+        border: 2px solid var(--LightPink);
+        color: var(--LightPink);
+        background-color: transparent;
+    }
+}
+p{
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+}
+h1{
+    font-size: clamp(2rem, 3.5vw, 3.3rem);
+    line-height: clamp(2rem, 3.5vw, 3.3rem);
+    margin: 0 0 2vw;
+}
+h2{
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    line-height: clamp(1.5rem, 2.5vw, 2.2rem);
+    margin: 0 0 2vw;
+}
+.first-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    p{
+        width: 45%;
+        margin: 0 0 2vw;
+    }
+    button{
+        margin: 0 0 8vw;
+    }
+    > img{
+        width: 82%;
+        margin: 0 0 8vw;
+    }
+    .first-lower{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        > div{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            img{
+                width: 4vw;
+                margin: 0 0 1vw;
+            }
+            > div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                    width: fit-content;
+                    color: rgb(145, 145, 145);
+                }
+            }
+        }
+        h1{
+            font-size: clamp(3.5rem, 6vw, 5rem);
+            line-height: clamp(3.5rem, 6vw, 5rem);
+            margin: 0 0 1vw;
+            font-family: 'Open Sans';
+        }
+    }
+}
+.second-section{
+    > div:not(.second-second, .second-fourth){
+        padding: 14vw 5vw 12vw;
+    }
+    .second-second, .second-fourth{
+        padding: 8vw 5vw 9vw;
+    }
+    > div:not(.second-fourth){
+        display: grid;
+        grid-template-columns: 50% 50%;
+        > div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .second-first-left, .second-third-left{
+            padding: 0 2vw 0 0;
+        }
+        .second-second-right{
+            padding: 0 0 0 2vw;
+        }
+        img{
+            width: 88%;
+        }
+        .align-right{
+            margin: auto 0 auto auto;
+        }
+    }
+}
+.second-first{
+    background-image: url(./images/bg-section-top-desktop-1.svg), url(./images/bg-section-bottom-desktop-1.svg);
+    background-repeat: no-repeat;
+    background-size: 100%, contain;
+    background-position: center top, center bottom;
+    position: relative;
+}
+.second-first::before{
+    position: absolute;
+    content: '';
+    background-color: var(--VeryPaleBlue);
+    top: 8.8vw;
+    left: -5vw;
+    width: calc(100% + 5vw);
+    height: calc(100% - 17vw);
+    z-index: -1;
+}
+.second-third{
+    background-image: url(./images/bg-section-top-desktop-2.svg), url(./images/bg-section-bottom-desktop-2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%, contain;
+    background-position: center top, center bottom;
+    position: relative;
+}
+.second-third::before{
+    position: absolute;
+    content: '';
+    background-color: var(--VeryPaleBlue);
+    top: 8.8vw;
+    left: -5vw;
+    width: calc(100% + 5vw);
+    height: calc(100% - 17vw);
+    z-index: -1;
+}
+.second-fourth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.bottom-section{
+    position: relative;
+    background-image: url(./images/bg-footer-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    padding: 15vw 5vw 5vw !important;
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.bottom-section::before{
+    position: absolute;
+    content: '';
+    background-color: var(--VeryDarkCyan);
+    top: 10.5vw;
+    left: -5vw;
+    width: calc(100% + 5vw);
+    height: calc(100% - 10.5vw);
+    z-index: -1;
+}
+.bottom-left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    .somebs{
+        font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    }
+    .phone, .email{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: clamp(1rem, 3vw, 2rem);
+    }
+    .phone img, .email img{
+        position: absolute;
+        left: clamp(-2rem, -3vw, -1rem);
+    }
+    > svg path{
+        fill: white;
+    }
+}
+.socialPlatforms{
+    margin: 2vw 0 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    svg:not(#facebook){
+        width: 2.5vw;
+        height: fit-content;
+        cursor: pointer;
+        path{
+            fill: white;
+        }
+    }
+}
+.socialPlatforms svg:hover path:not(#path1){
+    fill: cyan;
+}
+#facebook{
+    width: 3.2vw;
+    height: 3.2vw;
+    cursor: pointer;
+}
+.bottom-right{
+    padding: 0 0 0 5vw;
+    h3{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
+        margin: 0 0 1vw;
+    }
+    p{
+        width: 80%;
+    }
+    form{
+        display: flex;
+        align-items: start;
+        width: 100%;
+        gap: 2.5vw;
+        margin: 3vw 0 0;
+        .input-div{
+            width: 70%;
+        }
+        input{
+            height: 4vw;
+            width: 100%;
+            padding: 0 1vw;
+            border-radius: 0.5vw;
+            outline: none;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        button{
+            width: 30%;
+            border-radius: 0.5vw;
+            box-shadow: 0 0 10px 1px rgb(67, 67, 67);
+        }
+        #error{
+            margin: 0.25vw 0 0;
+            color: var(--LightRed);
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            display: none;
+        }
+    }
+}
+button{
+    height: 4vw;
+    width: 25vw;
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+    border-radius: 5vw;
+    border: none;
+    box-shadow: 0 0 10px 1px rgb(227, 227, 227);
+    cursor: pointer;
+    background-color: var(--Pink);
+    color: white;
+    font-weight: 600;
+}
+button:hover{
+    background-color: var(--LightPink);
+
+}
+footer{
+    position: absolute;
+    top: 99.3%;
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        width: 100%;
+        > section:not(.second-section){
+            padding: 6vw;
+        }
+    }
+    .top{
+        button{
+            height: 8vw;
+            width: 25vw;
+        }
+        img{
+            width: 30vw;
+        }
+    }
+    p{
+        font-size: clamp(0.9rem, 4vw, 1.3rem);
+        font-weight: 500;
+    }
+    h1{
+        font-size: clamp(2rem, 5vw, 3.3rem);
+        line-height: clamp(2rem, 8vw, 3.3rem);
+        margin: 0 0 5vw;
+    }
+    h2{
+        font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+        line-height: clamp(1.5rem, 4.5vw, 2.2rem);
+        margin: 0 0 4vw;
+    }
+    .first-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 0 2vw;
+        > p{
+            width: 100%;
+            margin: 0 0 10vw;
+        }
+        button{
+            margin: 0 0 25vw;
+        }
+        > img{
+            width: 100%;
+            margin: 0 0 28vw;
+        }
+        .first-lower{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20vw;
+            width: fit-content !important;
+            > div{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                width: 100%;
+                img{
+                    width: 8vw;
+                    margin: 0 0 1vw;
+                }
+                p{
+                    width: fit-content;
+                }
+            }
+            h1{
+                font-size: clamp(3.5rem, 18vw, 5rem);
+                line-height: clamp(3.5rem, 18vw, 5rem);
+                margin: 0 0 2vw;
+            }
+        }
+    }
+    .second-section{
+        > div:not(.second-second, .second-fourth){
+            padding: 50vw 6vw 35vw;
+        }
+        .second-second, .second-fourth{
+            padding: 40vw 5vw 30vw;
+        }
+        > div:not(.second-fourth){
+            text-align: center;
+            display: grid;
+            grid-template-columns: 100%;
+            gap: 20vw;
+            p{
+                font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+                font-weight: 500;
+            }
+            .second-first-left, .second-third-left{
+                padding: 0;
+            }
+            .second-second-right{
+                padding: 0;
+            }
+            img{
+                width: 100%;
+            }
+            .align-right{
+                grid-row: 1;
+            }
+        }
+    }
+    .second-first{
+        background-image: url(./images/bg-section-top-mobile-1.svg), url(./images/bg-section-bottom-mobile-1.svg);
+    }
+    .second-first::before{
+        top: 28vw;
+        height: calc(100% - 40vw);
+    }
+    .second-third{
+        padding: 40vw 6vw 50vw !important;
+        background-image: url(./images/bg-section-top-mobile-2.svg), url(./images/bg-section-bottom-mobile-2.svg);
+    }
+    .second-third::before{
+        top: 26vw;
+        height: calc(100% - 48vw);
+    }
+    .second-fourth{
+        padding: 20vw 6vw 60vw !important;
+    }
+    .bottom-section{
+        background-image: url(./images/bg-footer-top-mobile.svg);
+        padding: 30vw 6vw 10vw !important;
+        color: white;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 8vw;
+    }
+    .bottom-section::before{
+        position: absolute;
+        content: '';
+        background-color: var(--VeryDarkCyan);
+        top: 10.5vw;
+        left: -5vw;
+        width: calc(100% + 5vw);
+        height: calc(100% - 10.5vw);
+        z-index: -1;
+    }
+    .bottom-left{
+        width: 100%;
+        flex-direction: column;
+        gap: 5vw;
+        .somebs{
+            font-size: clamp(0.8rem, 4vw, 1.2rem);
+            margin: 0 0 4vw;
+        }
+        .phone, .email{
+            margin-left: clamp(1rem, 6vw, 2rem);
+        }
+        .phone img, .email img{
+            left: clamp(-2rem, -6vw, -1rem);
+        }
+        > svg path{
+            fill: white;
+        }
+    }
+    .socialPlatforms{
+        margin: 8vw 0 0;
+        gap: 4vw;
+        svg:not(#facebook){
+            width: 6vw;
+        }
+    }
+    #facebook{
+        width: 8vw;
+        height: 8vw;
+    }
+    .bottom-right{
+        grid-row: 1;
+        padding: 0;
+        h3{
+            font-size: clamp(1.2rem, 5vw, 1.8rem);
+            margin: 0 0 2vw;
+        }
+        p{
+            width: 100%;
+        }
+        form{
+            align-items: end;
+            flex-direction: column;
+            width: 100%;
+            gap: 3vw;
+            margin: 8vw 0 0;
+            .input-div{
+                width: 100%;
+            }
+            input{
+                height: 10vw;
+                width: 100%;
+                padding: 0 1vw;
+                border-radius: 1vw;
+                outline: none;
+                border: 2px solid black;
+                cursor: pointer;
+            }
+            button{
+                width: 50%;
+                border-radius: 1vw;
+            }
+        }
+    }
+    button{
+        height: 10vw;
+        width: 50vw;
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+        border-radius: 8vw;
+    }
+    footer{
+        position: absolute;
+        top: 99.6%;
+    }
+    
+}
